@@ -1,0 +1,39 @@
+.circuloMaior {
+    border: 3px solid;
+    border-color: #9f5ebe;
+    border-radius: 50%;
+    height: 27vw;
+    width: 27vw;
+    background-color: transparent;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .circuloMenor {
+    border: 3px solid;
+    border-color: #5e85be;
+    border-radius: 50%;
+    height: 20vw;
+    width: 20vw;
+    background-color: transparent;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .botaoTimer {
+    font-family: "Inria Serif-Bold", serif;
+    color: #ffffff;
+    font-size: 2.5vw;
+    font-weight: 700;
+    height: 7vw;
+    width: 16vw;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #378c8c;
+  }

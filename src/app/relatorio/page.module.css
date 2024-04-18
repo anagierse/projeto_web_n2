@@ -1,0 +1,31 @@
+.retangulo {
+    width: 80%;
+    max-width: 1217px;
+    height: auto;
+    background-color: rgba(188, 194, 255, 0.74);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column; /* Alterado para coluna em telas pequenas */
+    align-items: center; /* Centraliza o conteúdo */
+  }
+  
+  .caixaRelatorio {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #fff;
+  }
+  
+  .pRelatorio {
+    color: #fff;
+    font-family: "Inria Serif-bold", serif;
+    font-size: 200%;
+    font-style: normal;
+    font-weight: 550;
+    line-height: normal;
+    text-align: center;
+  }
