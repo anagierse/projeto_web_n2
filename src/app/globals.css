@@ -19,70 +19,21 @@ body {
   font-family: var(--default-font-family);
 }
 
-.menuContainer{
-  position: fixed;
-  width: 100%;
-}
-
 .menu ul {
   padding: 0;
   display: flex;
-  flex-wrap: nowrap;
+  
   justify-content: center;
 }
 
 .menu ul li {
   list-style-type: none;
-  padding: 20px;
-  
-}
-.menuItem{
-  text-decoration: none;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  
-  
-  justify-content: center;
-}
-
-.menu img {
-  margin-right: 10px;
-  height: 60px;
-  width: auto;
-  vertical-align: middle;
+  padding: 70px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   
 }
 
-.menu span {
-  color: #d9d9d9;
-  font-family: "Inria Serif-Bold", serif;
-  font-size: 130%;
-  font-weight: 700;
-  text-decoration: none;
-  vertical-align: middle;
-  
-}
-
-/* Homepage Desktop */
-.articleHome {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: auto;
-  padding: 100px 20px;
-}
-
-.pHome {
-  color: #ffffff;
-  font-family: "Inria Serif-Regular", serif;
-  font-size: 150%;
-  font-weight: 400;
-  line-height: 1.5;
-  max-width: 800px;
-  text-align: center;
-  overflow-x: hidden;
-}
 
 /* Design desktop timer */
 .circuloMaior {
@@ -126,7 +77,7 @@ body {
 }
 
 /* Relatório */
-.retangulo {
+.relatorio article {
   width: 80%;
   max-width: 1217px;
   height: auto;
@@ -139,16 +90,7 @@ body {
   align-items: center; 
 }
 
-.caixaRelatorio {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  border-bottom: 1px solid #fff;
-}
-
-.pRelatorio {
+.relatorio p {
   color: #fff;
   font-family: "Inria Serif-bold", serif;
   font-size: 200%;
@@ -159,59 +101,7 @@ body {
 }
 
 /*Design destktop formulário*/
-.retangulo2 {
-  width: 80%;
-  max-width: 1217px;
-  height: 75vh;
-  background-color: rgba(188, 194, 255, 0.74);
-  margin: 0 auto;
-  margin-top: 10px;
-  padding: 0px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
 
-.retangulo2 form {
-  margin: 0 auto;
-}
-
-.titulosForms {
-  color: #fff;
-  font-family: "Inria Serif";
-  font-size: 15px;
-  font-weight: 600;
-  line-height: normal;
-  margin-bottom: 10px;
-}
-
-.inputsForms {
-  width: calc(100% - 40px);
-  height: 30px;
-  background: #bdd9f2;
-  margin: 10px 0;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.botaoForms {
-  width: calc(100% - 40px);
-  background: #bdd9f2;
-  color: #fff;
-  margin-top: 20px;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: normal;
-}
-
-.loginSenhaForms {
-  color: #fff;
-  font-family: "Inria Serif";
-  font-size: 20px;
-  font-weight: 600;
-  line-height: normal;
-  margin-bottom: 20px;
-}
 
 /* Media Queries para tornar o design responsivo */
 @media only screen and (max-width: 600px) {
@@ -221,11 +111,11 @@ body {
     flex-direction: column;
   }
 
-  .menuContainer{
+  .menu{
     position: fixed;
     width: 100%;
   }
-  .menuContainer nav {
+  .menu nav {
     justify-content: center;
     gap: 10px;
   }
@@ -244,7 +134,7 @@ body {
     text-align: right;
   }
 
-  .home {
+  .articleHome {
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -254,7 +144,7 @@ body {
     text-align: center;
   }
 
-  .pHome {
+  .articleHome p {
     position: relative;
     text-align: center;
     font-size: 120%;
@@ -269,18 +159,18 @@ body {
     height: 100%;
     padding: 10px;
   }
-  .pRelatorio {
+  .relatorio p {
     text-align: center;
     margin: 10px 0;
   }
 
   /* Layout em coluna */
-  .menu-item {
+  .menuItem {
     flex-direction: column;
     align-items: center; /* Muda o layout do menu para coluna */
   }
 
-  .inputsForms {
+  .formulario input {
     display: flex;
     flex-direction: row;
     width: calc(100% - 10px);

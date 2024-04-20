@@ -7,8 +7,8 @@ export default function Home() {
     <div>
       <Menu />
       <main>
-        <article className="articleHome">
-          <p className="pHome">
+        <article className={styles.articleHome}>
+          <p>
             Se você busca rastrear sua qualidade e quantidade de sono esse é o
             site perfeito para você, com um timer inteligente que registra
             quanto tempo você dorme e baseado nisso produz um relatório das suas

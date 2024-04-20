@@ -6,14 +6,12 @@ import styles from "./page.module.css";
 export default function login() {
   return (
     <>
-      <section className="container">
         <Menu />
-
-        <article className="retangulo2">
-          <div className="formulario1">
-            <h2 className="loginSenhaForms">Login</h2>
-            <div className="formField">
-              <label htmlFor="username" className="titulosForms">
+        <article className={styles.formulario}>
+        <div>
+            <h2>Login</h2>
+            <div>
+              <label htmlFor="username">
                 Nome de Usuário:
               </label>
               <input
@@ -22,11 +20,9 @@ export default function login() {
                 name="username"
                 placeholder="Digite seu usuário"
                 required
-                className="inputsForms"
               />
-            </div>
-            <div className="formField">
-              <label htmlFor="password" className="titulosForms">
+            <div>
+              <label htmlFor="password">
                 Senha:
               </label>
               <input
@@ -35,20 +31,19 @@ export default function login() {
                 name="password"
                 placeholder="Digite sua senha"
                 required
-                className="inputsForms"
               />
             </div>
-            <div className="formField">
-              <button type="submit" className="botaoForms">
+            <div>
+              <button>
                 Login
               </button>
             </div>
           </div>
-
-          <div className="formulario2">
-            <h2 className="loginSenhaForms">Criar Conta</h2>
-            <div className="formField">
-              <label htmlFor="username" className="titulosForms">
+          </div>
+          <div>
+            <h2>Criar Conta</h2>
+            <div>
+              <label htmlFor="username">
                 Nome de Usuário:
               </label>
               <input
@@ -57,11 +52,10 @@ export default function login() {
                 name="username"
                 placeholder="Digite o usuário"
                 required
-                className="inputsForms"
               />
             </div>
-            <div className="formField">
-              <label htmlFor="email" className="titulosForms">
+            <div>
+              <label>
                 Email:
               </label>
               <input
@@ -70,11 +64,10 @@ export default function login() {
                 name="email"
                 placeholder="Digite seu email"
                 required
-                className="inputsForms"
               />
             </div>
-            <div className="formField">
-              <label htmlFor="password" className="titulosForms">
+            <div>
+              <label htmlFor="password">
                 Senha:
               </label>
               <input
@@ -83,11 +76,10 @@ export default function login() {
                 name="password"
                 placeholder="Digite a senha"
                 required
-                className="inputsForms"
               />
             </div>
-            <div className="formField">
-              <label htmlFor="confirmPassword" className="titulosForms">
+            <div>
+              <label htmlFor="confirmPassword">
                 Confirmar Senha:
               </label>
               <input
@@ -96,17 +88,15 @@ export default function login() {
                 name="confirmPassword"
                 placeholder="Confirme sua senha"
                 required
-                className="inputsForms"
               />
             </div>
-            <div className="formField">
-              <button type="submit" className="botaoForms">
+            <div>
+              <button type="submit">
                 Criar Usuário
               </button>
             </div>
           </div>
         </article>
-      </section>
     </>
   );
 }
