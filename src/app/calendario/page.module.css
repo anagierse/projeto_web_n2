@@ -1,39 +1,53 @@
-.circuloMaior {
-    border: 3px solid;
-    border-color: #9f5ebe;
-    border-radius: 50%;
-    height: 27vw;
-    width: 27vw;
-    background-color: transparent;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .circuloMenor {
-    border: 3px solid;
-    border-color: #5e85be;
-    border-radius: 50%;
-    height: 20vw;
-    width: 20vw;
-    background-color: transparent;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .botaoTimer {
-    font-family: "Inria Serif-Bold", serif;
-    color: #ffffff;
-    font-size: 2.5vw;
-    font-weight: 700;
-    height: 7vw;
-    width: 16vw;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #378c8c;
-  }
+.formulario {
+  width: 80%;
+  max-width: 1217px;
+  height: 75vh;
+  background-color: rgba(188, 194, 255, 0.74);
+  margin: 0 auto;
+  margin-top: 10px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formulario form {
+  margin: 0 auto;
+}
+
+.formulario label {
+  color: #fff;
+  font-family: "Inria Serif";
+  font-size: 15px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 10px;
+}
+
+.formulario input {
+  width: calc(100% - 40px);
+  height: 30px;
+  background: #bdd9f2;
+  margin: 10px 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.formulario button{
+  width: calc(100% - 40px);
+  background: #bdd9f2;
+  color: #fff;
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.formulario h2 {
+  color: #fff;
+  font-family: "Inria Serif";
+  font-size: 20px;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 20px;
+}
