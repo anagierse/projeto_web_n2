@@ -1,48 +1,6 @@
 {
   "night": [
     {
-      "id": "1",
-      "dia": "7",
-      "mes": "6",
-      "horas": "+12 horas",
-      "qualidade": "ótima"
-    },
-    {
-      "id": "2",
-      "dia": "2",
-      "mes": "maio",
-      "horas": "8",
-      "qualidade": "regular"
-    },
-    {
-      "id": "3",
-      "dia": "3",
-      "mes": "maio",
-      "horas": "2",
-      "qualidade": "péssima"
-    },
-    {
-      "id": "357e9326-ee8a-4801-9acf-10f93c8f2dcc",
-      "dia": "",
-      "mes": "",
-      "horas": "",
-      "qualidade": ""
-    },
-    {
-      "id": "9ca3524d-dfe0-49a3-91ea-eddb7daa7417",
-      "dia": "",
-      "mes": 6,
-      "horas": "",
-      "qualidade": ""
-    },
-    {
-      "id": "4817434b-1950-46f6-809d-091f752632e0",
-      "dia": "",
-      "mes": 10,
-      "horas": "5-6 horas",
-      "qualidade": "ótima"
-    },
-    {
       "id": "0a164d3f-0735-450c-a8be-ead9a26cfd51",
       "dia": "15",
       "mes": 8,

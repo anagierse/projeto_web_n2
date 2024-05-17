@@ -60,3 +60,18 @@ export async function updateNight(night){
         console.log("ERRO: "+error)
     }
 }
+
+
+// --------------------- DELETE ----------------------
+export async function deleteNight(id){
+    try{
+        let response = await fetch("http://localhost:8000/night/"+id,
+            {
+                method: "DELETE"
+            })
+            return response.status
+    }catch(error){
+        console.log("ERROR: "+error)
+    }
+        
+}
