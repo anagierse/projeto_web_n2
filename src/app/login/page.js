@@ -1,9 +1,60 @@
 import Link from "next/link";
 import Menu from "@/components/menu";
 import styles from "./page.module.css";
+import { useEffect } from "react";
+import { addNight, getNight, updateNight } from "../utils/api";
 
+var i = 3
 
 export default function login() {
+  const [nights, setNights] = useState(null)
+  const [dia, setDia] = useState("")
+  const[mes, setMes] = useState("")
+  const[horas, setHoras] = useState("")
+  const[qualidade, setQualidade] = useState("")
+
+  useEffect(() =>{
+    getNights()
+  .then((data)=> setNights(data))
+},[]
+  )
+
+  function changeHoras(event){
+    setHoras(event.target.value)
+  }
+
+  function changeQualidade(event){
+    setQualidade(event.target.value)
+  }
+
+  function handleAddQualidade(){
+    event.preventDefault()
+    let id = i
+    
+    i++
+
+    let n = {id, dia, mes, horas, qualidade}
+
+    addNight(n).then((status)=>{
+    if(status==201){
+        getNights()
+        .then((data)=> setNights(data))
+    }
+  }
+  )}
+
+  function handleUpdateNight(){
+    event.preventDefault()
+    let n = {id, dia, mes, horas, qualidade}
+
+    updateNight(n).then((status)=>{
+      if(status == 200){
+        getNights()
+        .then((data)=> setNights(data))
+      }
+    })
+  }
+
   return (
     <>
         <Menu />
@@ -22,7 +73,8 @@ export default function login() {
                 required
               />
             <div>
-              <label htmlFor="password">
+              <label html
+              For="password">
                 Senha:
               </label>
               <input
