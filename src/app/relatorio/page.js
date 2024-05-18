@@ -1,5 +1,4 @@
 'use client'
-import Link from "next/link";
 import Menu from "@/components/menu";
 import styles from "./page.module.css";
 import Nights from "@/components/Nights";
@@ -32,19 +31,6 @@ export default function relatorio() {
       setNoiteSelecionada(null);
     }
   }, [nights, diaSelecionado, mesSelecionado]);
-
-  function changeMes(event) {
-    setMesSelecionado(event.target.value);
-  }
-
-  function changeDia(event) {
-    setMesSelecionado(event.target.value);
-  }
-  
-  function handleDiaSelecionadoChange(event) {
-    setDiaSelecionado(event.target.value);
-  }
-
 
   useEffect(() => {
     validaDias(mesSelecionado);
