@@ -20,18 +20,14 @@ export default function Nights({ night }) {
         async function checkFeriado(dia, mes, ano) {
             try {
                 const url = `https://brasilapi.com.br/api/feriados/v1/${ano}`;
-                console.log("Fetching feriados from:", url);
                 const response = await fetch(url);
                 const data = await response.json();
-                console.log("Feriados fetched:", data);
 
                 const diaStr = dia.toString().padStart(2, '0');
                 const mesStr = mes.toString().padStart(2, '0');
                 const dateString = `${ano}-${mesStr}-${diaStr}`;
-                console.log("Checking feriado for date:", dateString);
 
                 const matchingFeriado = data.find(feriado => feriado.date.startsWith(dateString));
-                console.log("Matching feriado:", matchingFeriado);
 
                 setFeriado(matchingFeriado);
             } catch (error) {
@@ -50,8 +46,8 @@ export default function Nights({ night }) {
                     window.location.reload();
                 }
             })
-            .catch((error) => console.error("Error deleting night:", error));
     }
+    
 
     return (
         <article className={styles.night}>

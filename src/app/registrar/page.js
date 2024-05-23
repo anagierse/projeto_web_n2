@@ -3,26 +3,23 @@
 import React, { useState, useEffect } from "react";
 import Menu from "@/components/menu";
 import styles from "./page.module.css";
+import { v4 as uuid } from 'uuid';
 import { addNight, getNight, updateNight } from "../utils/api";
-import { v4 as uuid } from "uuid";
-
 
 export default function Calendario() {
   const mesesCom31Dias = [1, 3, 5, 7, 8, 10, 12];
   const mesesCom30Dias = [4, 6, 9, 11];
 
-  const [mesSelecionado, setMesSelecionado] = useState(1); // Valor padrão para janeiro
+  const [mesSelecionado, setMesSelecionado] = useState(1); 
   const [dias, setDias] = useState([]);
   const [nights, setNights] = useState(null);
   const [dia, setDia] = useState(1);
   const [horas, setHoras] = useState("Não dormiu");
   const [qualidade, setQualidade] = useState("péssima");
 
-
   useEffect(() => {
     getNight()
       .then((data) => setNights(data))
-      .catch((error) => console.error("Error fetching nights:", error));
   }, []);
 
   useEffect(() => {
@@ -49,15 +46,16 @@ export default function Calendario() {
   function handleAddNight(event) {
     event.preventDefault();
     let id = uuid();
-
+  
     let n = { id, dia: parseInt(dia), mes: mesSelecionado, horas, qualidade };
-
+  
     if (nights && nights.length > 0) {
-      const nightExists = nights.some((night) => night.dia === parseInt(dia) && night.mes === mesSelecionado);
-
-      if (nightExists) {
-        const existingNight = nights.find((night) => night.dia === parseInt(dia) && night.mes === mesSelecionado);
-        n.id = existingNight.id;
+      const noiteExiste = nights.some((night) => night.dia === parseInt(dia) && night.mes === mesSelecionado);
+      console.log(noiteExiste)
+      if (noiteExiste) {
+        const noiteExistente = nights.find((night) => night.dia === parseInt(dia) && night.mes === mesSelecionado);
+        console.log(noiteExistente)
+        n.id = noiteExistente.id; 
         handleUpdateNight(n);
       } else {
         addNight(n)
@@ -65,10 +63,9 @@ export default function Calendario() {
             if (status === 201) {
               getNight()
                 .then((data) => setNights(data))
-                .catch((error) => console.error("Error fetching nights:", error));
             }
           })
-          .catch((error) => console.error("Error adding night:", error));
+      
       }
     } else {
       addNight(n)
@@ -76,10 +73,8 @@ export default function Calendario() {
           if (status === 201) {
             getNight()
               .then((data) => setNights(data))
-              .catch((error) => console.error("Error fetching nights:", error));
           }
         })
-        .catch((error) => console.error("Error adding night:", error));
     }
   }
 
@@ -89,10 +84,8 @@ export default function Calendario() {
         if (status === 200) {
           getNight()
             .then((data) => setNights(data))
-            .catch((error) => console.error("Error fetching nights:", error));
         }
       })
-      .catch((error) => console.error("Error updating night:", error));
   }
 
   function validaDias(month) {

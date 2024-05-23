@@ -3,16 +3,25 @@
   justify-content: center;
   align-items: center;
   height: auto;
-  padding: 100px 20px;
+  padding: 100px 20px; 
 }
 
 .articleHome p {
-  color: #ffffff;
-  font-family: "Inria Serif-Regular", serif;
+  color: var(--corTexto);
+  font-family: var(--fonteTexto);
   font-size: 150%;
-  font-weight: 400;
+  font-weight: 400px;
   line-height: 1.5;
   max-width: 800px;
   text-align: center;
   overflow-x: hidden;
+}
+
+@media only screen and (max-width: 600px) {
+  .articleHome {
+    padding: 10px 10px; 
+    font-size: 15px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
 }

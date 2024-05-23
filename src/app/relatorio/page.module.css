@@ -2,21 +2,39 @@
   width: 80%;
   max-width: 1217px;
   height: auto;
-  background-color: rgba(188, 194, 255, 0.74);
+  background-color: var(--corContainer);
   margin: 0 auto;
   margin-top: 10px;
-  padding: 0px;
+  padding: 20px; 
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  flex-direction: row; 
+  flex-wrap: wrap; 
+  align-items: flex-start; 
+  justify-content: space-between; 
+  margin-bottom: 50px;
 }
 
 .relatorio p {
-  color: #fff;
-  font-family: "Inria Serif-bold", serif;
+  color: var(--corTexto);
+  font-family: var(--fonteTexto);
   font-size: 200%;
   font-style: normal;
   font-weight: 550;
   line-height: normal;
   text-align: center;
+  flex: 1 1 45%; 
+  margin: 10px; 
+}
+
+@media (max-width: 768px) {
+  .relatorio article {
+    flex-direction: column; 
+    align-items: center; 
+  }
+
+  .relatorio p {
+    font-size: 150%; 
+    flex: 1 1 100%; 
+    margin: 5px 0; 
+  }
 }

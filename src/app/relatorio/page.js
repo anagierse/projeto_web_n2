@@ -1,12 +1,11 @@
-'use client'
+'use client';
 import Menu from "@/components/menu";
 import styles from "./page.module.css";
 import Nights from "@/components/Nights";
 import { useEffect, useState } from "react";
 import { getNight } from "../utils/api";
 
-
-export default function relatorio() {
+export default function Relatorio() {
   const [mesSelecionado, setMesSelecionado] = useState("");
   const [dias, setDias] = useState([]);
   const [nights, setNights] = useState(null);
@@ -16,11 +15,12 @@ export default function relatorio() {
   const mesesCom31Dias = [1, 3, 5, 7, 8, 10, 12];
   const mesesCom30Dias = [4, 6, 9, 11];
 
-
   useEffect(() => {
     getNight()
-      .then((data) => setNights(data))
-      .catch((error) => console.error("Error fetching nights:", error));
+      .then((data) => {
+        const nightsOrdenadas = ordenarPorMesEDia(data);
+        setNights(nightsOrdenadas);
+      })
   }, []);
 
   useEffect(() => {
@@ -48,15 +48,24 @@ export default function relatorio() {
     const diasDoMes = Array.from({ length: totalDias }, (_, i) => i + 1);
     setDias(diasDoMes);
   }
-  
+
+  function ordenarPorMesEDia(nights) {
+    return nights.sort((a, b) => {
+      if (a.mes === b.mes) {
+        return a.dia - b.dia;
+      }
+      return a.mes - b.mes;
+    });
+  }
+
   return (
     <>
       <Menu />
       <section className={styles.relatorio}>
-      { nights 
-              ? ( nights.map( (n) => <Nights night={n} /> ) ) 
-              : (<p>Loading...</p>) }
+        {nights 
+          ? (nights.map((n) => <Nights night={n} key={`${n.mes}-${n.dia}`} />)) 
+          : (<p>Loading...</p>)}
       </section>
-      </>
+    </>
   );
 }

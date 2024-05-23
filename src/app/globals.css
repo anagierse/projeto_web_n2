@@ -1,9 +1,7 @@
-/* body e menu */
 :root {
-  --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
-    "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
-    "Source Han Sans CN", sans-serif;
+  --corTexto: #ffffff;
+  --fonteTexto: "Inria Serif-Regular", serif;
+  --corContainer: rgba(188, 194, 255, 0.74);
 }
 
 body {
@@ -19,164 +17,12 @@ body {
   font-family: var(--default-font-family);
 }
 
-.menu ul {
-  padding: 0;
-  display: flex;
-  
-  justify-content: center;
-}
 
-.menu ul li {
-  list-style-type: none;
-  padding: 70px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  
-}
-
-
-/* Design desktop timer */
-.circuloMaior {
-  border: 3px solid;
-  border-color: #9f5ebe;
-  border-radius: 50%;
-  height: 27vw;
-  width: 27vw;
-  background-color: transparent;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.circuloMenor {
-  border: 3px solid;
-  border-color: #5e85be;
-  border-radius: 50%;
-  height: 20vw;
-  width: 20vw;
-  background-color: transparent;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.botaoTimer {
-  font-family: "Inria Serif-Bold", serif;
-  color: #ffffff;
-  font-size: 2.5vw;
-  font-weight: 700;
-  height: 7vw;
-  width: 16vw;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #378c8c;
-}
-
-/* Relatório */
-.relatorio article {
-  width: 80%;
-  max-width: 1217px;
-  height: auto;
-  background-color: rgba(188, 194, 255, 0.74);
-  margin: 0 auto;
-  margin-top: 10px;
-  padding: 0px;
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
-}
-
-.relatorio p {
-  color: #fff;
-  font-family: "Inria Serif-bold", serif;
-  font-size: 200%;
-  font-style: normal;
-  font-weight: 550;
-  line-height: normal;
-  text-align: center;
-}
-
-/*Design destktop formulário*/
-
-
-/* Media Queries para tornar o design responsivo */
 @media only screen and (max-width: 600px) {
   body {
     background-image: url("https://images.unsplash.com/photo-1531956468651-8fc931f28a9b?q=80&w=1908&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
     background-repeat: repeat;
     flex-direction: column;
   }
-
-  .menu{
-    position: fixed;
-    width: 100%;
-  }
-  .menu nav {
-    justify-content: center;
-    gap: 10px;
-  }
-
-  .menuContainer div{
-    justify-content: flex;
-    justify-content: space-around;
-    gap: 10px;
-  }
-
-  .hometxt,
-  .timertxt,
-  .relatoriotxt,
-  .logintxt {
-    font-size: 100%;
-    text-align: right;
-  }
-
-  .articleHome {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-  }
-
-  .divCirculoMaior {
-    text-align: center;
-  }
-
-  .articleHome p {
-    position: relative;
-    text-align: center;
-    font-size: 120%;
-  }
-
-  .container {
-    font-size: 40%;
-  }
-  .retangulo {
-    width: 100%;
-    margin-top: 30px;
-    height: 100%;
-    padding: 10px;
-  }
-  .relatorio p {
-    text-align: center;
-    margin: 10px 0;
-  }
-
-  /* Layout em coluna */
-  .menuItem {
-    flex-direction: column;
-    align-items: center; /* Muda o layout do menu para coluna */
-  }
-
-  .formulario input {
-    display: flex;
-    flex-direction: row;
-    width: calc(100% - 10px);
-  }
-
-  .botaoForms {
-    width: calc(100% - 20px);
-  }
 }
+  

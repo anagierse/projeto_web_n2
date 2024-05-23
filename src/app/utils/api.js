@@ -25,15 +25,14 @@ export async function getNight(night){
     }
 }
 
-export async function getNightByDate(date){
-    try{
-        let response = await fetch(`http://localhost:8000/night?author=${date}`)
-        let data = await response.json()
-        return data
-}
-catch(error){
-    console.log("ERROR: "+error)
-}
+export async function getNightByDate(dia, mes) {
+    try {
+        let response = await fetch(`http://localhost:8000/night?dia=${dia}&mes=${mes}`);
+        let data = await response.json();
+        return data;
+    } catch (error) {
+        console.log("ERROR: " + error);
+    }
 }
 
 export async function getNightById(id){
