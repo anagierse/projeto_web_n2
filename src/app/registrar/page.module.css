@@ -1,30 +1,30 @@
 .formulario {
-  width: 85%; 
+  width: 85%;
   max-width: 1217px;
-  margin: 0 auto; 
+  margin: 0 auto;
   margin-top: 10px;
-  padding: 10px 20px 10px 20px; 
-  display: block;
+  padding: 10px 20px 10px 20px;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; 
+  justify-content: center;
   text-align: center;
   background-color: var(--corContainer);
-  box-sizing: border-box; 
+  box-sizing: border-box;
   margin-bottom: 50px;
 }
 
 .formulario label {
   width: 100%;
-color: var(--corTexto);
+  color: var(--corTexto);
   font-family: var(--fonteTexto);
   font-size: 15px;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
 }
 
-.formulario select, 
+.formulario select,
 .formulario input {
   width: 100%;
   height: 40px;
@@ -37,7 +37,7 @@ color: var(--corTexto);
 .formulario button {
   width: 100%;
   background: #bdd9f2;
-color: var(--corTexto);
+  color: var(--corTexto);
   margin-top: 20px;
   font-size: 20px;
   font-weight: 600;
@@ -46,17 +46,18 @@ color: var(--corTexto);
 
 .formulario h2 {
   width: 100%;
-color: var(--corTexto);
+  color: var(--corTexto);
   font-family: var(--fonteTexto);
   font-size: 20px;
   font-weight: 600;
   line-height: normal;
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 @media (max-width: 768px) {
   .formulario {
     padding: 20px;
+    text-align: center;
   }
 
   .formulario label,
